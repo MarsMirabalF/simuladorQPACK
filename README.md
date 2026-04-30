@@ -130,3 +130,6 @@ Sobre la funcion comprimir()
 Sobre la funcion leerEncabezados()
  -Qué hizo la IA:Generó la lógica de parseo diferenciada para headers que comienzan con : pseudo-headers HTTP/2 como :path, :method, :status.
  -Revisión manual:Se verificó que el desplazamiento en indexOf no rompiera la separación nombre-valor en casos como :authority.
+
+Sobre los ejemplos.
+ -Cada ejemplo fuie generado con la IA claude para hacer la prueba de proyecto.
