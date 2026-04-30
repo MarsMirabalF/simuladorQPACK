@@ -1,0 +1,8 @@
+:method: GET
+:scheme: https
+:authority: ejemplo.com
+:path: /imagenes/foto.jpg
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+accept: image/webp,image/*
+accept-language: es-AR,es;q=0.9
+cache-control: max-age=0

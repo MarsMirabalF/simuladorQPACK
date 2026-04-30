@@ -1,0 +1,21 @@
+:status: 200
+server: nginx/1.24.0
+date: Mon, 04 Nov 2024 18:30:00 GMT
+content-type: text/html; charset=utf-8
+content-length: 8742
+content-encoding: gzip
+cache-control: public, max-age=31536000
+etag: "abc123versiondef"
+last-modified: Mon, 04 Nov 2024 14:00:00 GMT
+strict-transport-security: max-age=31536000; includesubdomains; preload
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-xss-protection: 1; mode=block
+content-security-policy: script-src 'self' https://cdn.ejemplo.com; style-src 'self' 'unsafe-inline'; img-src *
+access-control-allow-origin: https://app.ejemplo.com
+access-control-allow-methods: GET, POST, OPTIONS
+access-control-allow-headers: content-type, authorization
+access-control-allow-credentials: TRUE
+vary: accept-encoding, origin
+alt-svc: h3=":443"; ma=86400
+link: </estilos.css>; rel=preload; as=style
