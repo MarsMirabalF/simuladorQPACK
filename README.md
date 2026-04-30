@@ -55,6 +55,7 @@ Array.join():
 https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/join
  -Une todos los elementos de un arreglo en un texto 
 
+
 Math.floor(): 
 https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
  -Redondea un numero hacia abajo 
@@ -65,50 +66,11 @@ https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Ma
  -Redondea un numero al entero mas cercano
 
 
-String.charCodeAt(indice):
-https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt
- -Se usa en textoABytes() para convertir cada letra a su valor numerico.
- -Devuelve el numero ASCII del caracter en esa posicion del texto. Por ejemplo: "A".charCodeAt(0) devuelve 65.
-
-
-Number.toString(base):
-https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Number/toString
- -Se usa en byteAHex() para mostrar los bytes en formato hexadecimal.
- -Convierte un numero a texto en la base que le indiques.
- -Por ejemplo: 255..toString(16) devuelve "ff" (hexadecimal).
-
-
 String.indexOf(texto, desdePos):
 https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/indexO
  -Se usa en leerEncabezados() para encontrar el : que separa nombre y valor.
  -Busca la primera aparicion de un texto dentro de otro y devuelve la posicion. Si no lo encuentra devuelve -1.
  -El segundo parametro opcional indica desde que posicion empezar a buscar.
-
-
-String.substring(inicio, fin):
-https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/substring
- -Se usa en leerEncabezados() para separar el nombre y el valor del encabezado.
- -Extrae una parte del texto desde la posicion inicio hasta fin (sin incluir fin).
-
-
-Operador << :
-https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Left_shift
- -Se usa en numeroABytes() para calcular cuantos valores caben en cierta cantidad de bits.
- -1 << n equivale a 2 elevado a la n es el desplazamiento de bits a la izquierda.
- -Por ejemplo: 1 << 6 da 64, que es 2^6 esto tambien se explica en la documentacion de: 
- https://httpwg.org/specs/rfc7541.html#integer.representation
-
-
-Operador | :
-https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Bitwise_OR
- -Se usa en numeroABytes() para pegar el patron de bits de QPACK con el numero del indice es el OR de bits.
- -Combina dos numeros bit a bit. Si cualquiera de los dos tiene un bit en 1, el resultado tiene un 1 en esa posicion.
-
-
-FileReader:
-https://developer.mozilla.org/es/docs/Web/API/FileReader
- -Es un objeto del navegador que permite leer archivos seleccionados por el usuario.
- -Se usa en window.onload para leer el archivo .txt que sube el usuario.  .readAsText(archivo) lee el archivo como texto plano.
 
 
 document.getElementById(id):
@@ -119,17 +81,8 @@ https://developer.mozilla.org/es/docs/Web/API/Document/getElementById
 
 
 
-Sobre las funciones numeroABytes():
- -Qué hizo la IA:Se uso herramienta de la IA claude para corregir la logica de la funcion numeroABytes() sobre todo me sugirio usar el operardor << y |  La función de codificación de enteros (numeroABytes) algoritmo de "prefixed integer" definido en la RFC 7541/9204 fue algo muy complicado de implementar utilizó IA clause para tanto explicacion y como ir implementando poco a poco.
- -Revisión manual:implemente el algoritmo y investigar como funciona cada parte del mismo aunque no se logre un gran dominio del tema.
-
-Sobre la funcion comprimir()
- -Qué hizo la IA:Implementó los tres modos de codificación QPACK con sus prefijos de bits (0xC0, 0x50, 0x20) según RFC 9204 genero los logs estructurados con formato.
- -Revisión manual:Se verificó la correcta generación de bytes para cada modo y se ajustaron los textos de los logs.
-
-Sobre la funcion leerEncabezados()
- -Qué hizo la IA:Generó la lógica de parseo diferenciada para headers que comienzan con : pseudo-headers HTTP/2 como :path, :method, :status.
- -Revisión manual:Se verificó que el desplazamiento en indexOf no rompiera la separación nombre-valor en casos como :authority.
+Sobre la implemetacion:
+ -Se uso la IA claude para ver como eran los formatos de entrada y salida del codigo y apoyo para crear la funcion comprimir que me costo demasiado
 
 Sobre los ejemplos.
  -Cada ejemplo fuie generado con la IA claude para hacer la prueba de proyecto.

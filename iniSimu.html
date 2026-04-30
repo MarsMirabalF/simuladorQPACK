@@ -1,35 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Simulador QPACK</title>
+  <meta charset="UTF-8">
+  <title>Simulador QPACK</title>
 </head>
 <body>
-<h1>Simulador QPACK</h1>
+  <h1>Simulador QPACK</h1>
 
-<p><b>Escribir:</b></p>
-<textarea id="escribir" rows="7" cols="70" placeholder="Escribe aqui :D"></textarea>
+  <p><b>Escribir:</b></p>
+  <textarea id="escribir" rows="7" cols="70" placeholder="Escribe aqui :D"></textarea>
 
-<br><br>
+  <br><br>
 
-<button id="botonsitoComprimir">Comprimir</button>
+  <button id="botonsitoComprimir">Comprimir</button>
 
-<hr>
+  <hr>
 
-<p><b>Proceso de compresion:</b></p>
-<pre id="resultaditoProceso"></pre>
+  <p><b>Proceso de compresion:</b></p>
+  <pre id="resultaditoProceso"></pre>
 
-<p><b>Bytes comprimidos:</b></p>
+  <p><b>Tamano original => comprimido:</b> <span id="resultaditoTamano"></span></p>
+  <p><b>Ahorro:</b> <span id="resultaditoAhorro"></span></p>
 
-<p><b>Hexadecimal:</b></p>
-<div id="resultaditoHexadecimal"></div>
-
-<p><b>En decimal:</b></p>
-<div id="resultaditoDecimal"></div>
-
-<p><b>Tamaño comprimido:</b> <span id="resultaditoTamano"></span></p>
-<p><b>Ahorro:</b> <span id="resultaditoAhorro"></span></p>
-
-<script src="Simu.js"></script>
+  <script src="Simu.js"></script>
 </body>
 </html>
